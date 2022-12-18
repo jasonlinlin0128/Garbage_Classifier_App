@@ -2,12 +2,11 @@ package com.example.sa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
-import com.example.sa.Visitor.Page;
 import com.example.sa.Visitor.Switch;
 
 public class Home extends AppCompatActivity {
@@ -28,12 +27,15 @@ public class Home extends AppCompatActivity {
     }
 
     public void btnMainToLocation(View view) {
-        Switch aswitch = new Switch("NonRegistLocation",this);
-        aswitch.activity();
+        Switch localSwitch = new Switch("NonRegistLocation",this);
+        localSwitch.activity();
     }
 
     public void btnMainToTrashcan(View view) {
-        Switch aswitch = new Switch("NonRegistTrashcan",this);
-        aswitch.activity();
+        Switch localSwitch = new Switch("NonRegistTrashcan",this);
+        localSwitch.activity();
+    }
+    public void btnMainToChangetheme(View view) {
+        getResources().getColor(R.color.black);
     }
 }
